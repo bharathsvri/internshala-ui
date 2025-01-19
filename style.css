@@ -1,0 +1,300 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Header */
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.541);
+    padding: 20px 40px;
+    position: sticky;
+    top: 0;
+    gap:20px;
+    background-color: #fff;
+}
+
+.header-logo{
+    width: 160px;
+}
+
+nav{
+    display: flex;
+    gap: 60px;
+}
+
+header button{
+    display: none;
+    padding: 7px 15px;
+    background-color: #00A5EC;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/* footer */
+footer{
+    padding: 20px 40px;
+    background-color: #333;
+    color: #fff;
+}
+
+footer .section-1{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+footer .section-1 h3{
+    margin-bottom: 10px;
+}
+
+footer .section-1 p{
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+
+.footer-offer{
+    max-width: 217px;
+    margin-left: auto;
+}
+
+footer .section-2{
+    margin: 20px auto;
+    padding-top: 20px;
+    border-top: 1px solid #fff;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contact{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.contact .img{
+    display: flex;
+    gap: 20px;
+}
+
+.contact img{
+    width: 100px;
+}
+
+/* rating */
+.rating{
+    padding: 20px 40px;
+    background-color: #eef6ff;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.rating button{
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 14px;
+    font-size: 20px;
+    border-radius: 50px;
+    gap: 10px;
+}
+
+.rating .card{
+    background-color: #fff;
+}
+
+.rating .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 30px;
+}
+
+.rating .card .profile{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.rating .card .profile .profile-img{
+    width: 50px;
+    height: 50px;
+}
+
+.rat{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.reviews{
+    display: flex;
+    flex-direction: column;
+}
+
+.rat h2{
+    color: #006BC2;
+    font-size: 55px;
+}
+
+.star img{
+    width: 20px;
+}
+
+.quot-img{
+    width: 50px;
+}
+
+
+/* Main */
+main{
+    padding: 0 20px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.navigator{
+    color: gray;
+}
+
+.ui-ux{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.ui-ux .details{
+    grid-column: 2/4;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ui-ux .details p{
+    font-size: 13px;
+    color: gray;
+}
+
+/* resposive */
+@media screen and (max-width:769px) {
+    
+    /* Header */
+    header{
+        padding: 20px 30px;
+    }
+    
+    nav{
+        display: none;
+    }
+    
+    header button{
+        display: block;
+    }
+
+    /* footer */
+    footer{
+        padding: 20px 30px;
+    }
+
+    .contact{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    /* rating */
+    .rating{
+        padding: 20px 30px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .play-store{
+        grid-column: 1/3;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .play-store .rat{
+        display: none;
+    }
+
+    .play-store p{
+        display: none;
+    }
+
+    .play-store h2{
+        text-align: center;
+    }
+
+    .quot-img{
+        display: none;
+    }
+
+    /* main */
+    .ui-ux{
+        justify-items: center;
+    }
+
+    .ui-ux .details{
+        grid-column: 1/4;
+    }
+
+}
+
+@media screen and (max-width:426px) {
+    
+    /* Footer */
+    footer .section-1{
+        flex-direction: column;
+    }
+
+    footer .section-2{
+        flex-direction: column;
+    }
+
+    /* rating */
+    .rating{
+        grid-template-columns: 1fr;
+    }
+
+    .rating .card-2{
+        display: none;
+    }
+
+    .play-store h2{
+        font-size: 20px;
+    }
+
+    .play-store button{
+        font-size: 16px;
+    }
+}
