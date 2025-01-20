@@ -10,6 +10,10 @@
     flex-direction: column;
 }
 
+body{
+    background-color: #f8f8f8;
+}
+
 
 /* Header */
 header{
@@ -22,6 +26,7 @@ header{
     top: 0;
     gap:20px;
     background-color: #fff;
+    z-index: 10;
 }
 
 .header-logo{
@@ -201,6 +206,108 @@ main{
     color: gray;
 }
 
+.filters{
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    position: relative;
+    gap: 20px;
+    height: 570px;
+}
+
+
+.filter{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.filter div{
+    display: flex;
+    flex-direction: column;
+}
+
+.filter .work,
+.filter .part{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.filter label{
+    font-size: 14px;
+}
+
+.filter input{
+    padding: 10px 12px;
+}
+
+.filter p{
+    align-self: flex-end;
+}
+
+.filter h3,
+.filter p{
+    color: #00A5EC;
+}
+
+.filter-records{
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.product-manager{
+    padding: 20px;
+    background-color: #fff;
+}
+
+.product-manager p{
+    margin-bottom: 10px;
+    border-radius: 7px;
+}
+
+.product-manager button{
+    background-color: #00A5EC;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 7px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.designer{
+    background-color: #fff;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+}
+
+.designer .details{
+    display: flex;
+    justify-content: space-between;
+}
+
+.designer .details p{
+    color: gray;
+}
+
+.designer .place{
+    display: flex;
+    gap: 20px;
+}
+
+.days{
+    color:green;
+}
+
 /* resposive */
 @media screen and (max-width:769px) {
     
@@ -268,6 +375,15 @@ main{
         grid-column: 1/4;
     }
 
+    .filters{
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .filter{
+        display: none;
+    }
+
 }
 
 @media screen and (max-width:426px) {
@@ -296,5 +412,17 @@ main{
 
     .play-store button{
         font-size: 16px;
+    }
+
+    .product-manager{
+        display: none;
+    }
+
+    .designer .place{
+        gap: 6px;
+    }
+
+    .filters{
+        font-size: 12px;
     }
 }
